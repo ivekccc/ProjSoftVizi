@@ -14,4 +14,6 @@ public enum Zanr {
     ISTORIJSKI,
     NAUCNA_FANTASTIKA,
     DETEKTIVSKI,
+    Novel,
+    Tragedy,
 }

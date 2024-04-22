@@ -23,7 +23,8 @@ public class GlavnaForma extends javax.swing.JFrame {
     public GlavnaForma() {
         initComponents();
         kontroler=Controller.getInstance();
-        ModelTabeleKnjige modelTabele=new ModelTabeleKnjige(kontroler.getListaKnjiga()); 
+       // ModelTabeleKnjige modelTabele=new ModelTabeleKnjige(kontroler.getListaKnjiga()); 
+        ModelTabeleKnjige modelTabele=new ModelTabeleKnjige(kontroler.ucitajListuKnjigaIzBaze()); 
         jTableKnjige.setModel(modelTabele); 
     }
 
@@ -184,7 +185,10 @@ public class GlavnaForma extends javax.swing.JFrame {
             }
         else{
             Controller kontroller=Controller.getInstance();
-            kontroler.obrisiKnjigu(selektovaniRed);
+            //kontroler.obrisiKnjigu(selektovaniRed);
+            ModelTabeleKnjige mtk=(ModelTabeleKnjige) jTableKnjige.getModel();
+            int id =mtk.getListaKnjiga().get(selektovaniRed).getId();
+            kontroler.obrisiKnjiguIzBaze(id);
             osveziTabelu();
         }
     }//GEN-LAST:event_jButtonObrisiActionPerformed
@@ -201,7 +205,7 @@ public class GlavnaForma extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Morate selektovati knjigu koju zelite da obrisete!","Upozorenje",JOptionPane.WARNING_MESSAGE);
             return ;
         }
-        Knjiga selektovanaKnjiga=(Knjiga) kontroler.getListaKnjiga().get(selektovaniRed);
+        Knjiga selektovanaKnjiga=(Knjiga) kontroler.ucitajListuKnjigaIzBaze().get(selektovaniRed);
          FormaKnjiga fk=new FormaKnjiga(this, true,selektovanaKnjiga);
         fk.setVisible(true);
         
@@ -259,7 +263,10 @@ public class GlavnaForma extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
    void osveziTabelu() {
-        ModelTabeleKnjige modelTabele=(ModelTabeleKnjige) jTableKnjige.getModel();
-            modelTabele.osveziPodatke();
+       /* ModelTabeleKnjige modelTabele=(ModelTabeleKnjige) jTableKnjige.getModel();
+            modelTabele.osveziPodatke();*/
+       ModelTabeleKnjige modelTabele=new ModelTabeleKnjige(kontroler.ucitajListuKnjigaIzBaze());
+       jTableKnjige.setModel(modelTabele);
+       
     }
 }

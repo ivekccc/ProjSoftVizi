@@ -4,7 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/x/Documents/NetBeansProjects/PS_CAS_1_2/src/model/Autor.java</file>
+            <file>file:/C:/Users/x/Documents/NetBeansProjects/PS_CAS_1_2/src/model/Zanr.java</file>
+            <file>file:/C:/Users/x/Documents/NetBeansProjects/PS_CAS_1_2/src/baza/Konekcija.java</file>
             <file>file:/C:/Users/x/Documents/NetBeansProjects/PS_CAS_1_2/src/forme/ModelTabeleKnjige.java</file>
+            <file>file:/C:/Users/x/Documents/NetBeansProjects/PS_CAS_1_2/src/baza/DBBroker.java</file>
             <file>file:/C:/Users/x/Documents/NetBeansProjects/PS_CAS_1_2/src/controller/Controller.java</file>
             <file>file:/C:/Users/x/Documents/NetBeansProjects/PS_CAS_1_2/src/forme/GlavnaForma.java</file>
             <file>file:/C:/Users/x/Documents/NetBeansProjects/PS_CAS_1_2/src/model/Knjiga.java</file>
